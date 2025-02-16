@@ -46,6 +46,7 @@ class CurrentDayMenuView(mixins.ListModelMixin,
 class VoteViewSet(viewsets.ModelViewSet):
     queryset = Vote.objects.all()
     serializer_class = VoteSerializer
+    permission_classes = [IsAuthenticated]
 
 
 # Getting results for the current day
